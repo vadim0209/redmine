@@ -5,7 +5,6 @@ servises:
 
 script:
 - docker-compose --file ./docker-compose.yml up --detach 
-- docker ps -a
 - docker-compose images
 
 deploy:
