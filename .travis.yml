@@ -3,7 +3,7 @@ language: bash
 servises:
 - docker
 
-before_deploy:
+before_install:
 - docker-compose pull
 - docker-compose images
 
