@@ -166,7 +166,6 @@ DB_PATH - директория, для локального хранения б�
 
     script:
     - docker-compose --file ./docker-compose.yml up --detach 
-    - docker ps -a
     - docker-compose images
 
     deploy:
