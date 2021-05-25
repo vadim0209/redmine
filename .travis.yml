@@ -3,13 +3,12 @@ language: bash
 servises:
 - docker
 
-before_install:
+script:
 - docker-compose pull
 - docker-compose images
 
 deploy:
+ provider: script
+ script: bash push
  on:
   branch: main
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME"
-- docker tag redmine vadim0209/redmine
-- docker push vadim0209/redmine
