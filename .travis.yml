@@ -1,0 +1,16 @@
+language: bash
+
+servises:
+- docker
+
+before_deploy:
+- docker-compose pull
+- docker-compose images
+
+
+deploy:
+ on:
+  branch: main
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME"
+- docker tag redmine vadim0209/redmine
+- docker push vadim0209/redmine
