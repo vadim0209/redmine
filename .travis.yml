@@ -9,6 +9,6 @@ script:
 
 deploy:
  provider: script
- script: bash ./push
+ script: bash push.sh
  on:
   branch: main
