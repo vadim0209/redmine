@@ -4,7 +4,7 @@ servises:
 - docker
 
 script:
-- docker-compose --file ./docker-compose.yml up -detach 
+- docker-compose --file ./docker-compose.yml up --detach 
 - docker ps -a
 - docker-compose images
 
